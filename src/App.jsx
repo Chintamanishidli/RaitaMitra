@@ -11,7 +11,7 @@ import Donate from "./pages/Donate";
 
 export default function App() {
   return (
-    <div className="min-h-screen flex flex-col bg-primary-bg font-sans text-charcoal">
+    <div className="min-h-screen flex flex-col bg-[#F4F8F5] font-sans text-[#0f3d25]">
       <ScrollToTop />
       <Navbar />
       <main className="flex-grow">

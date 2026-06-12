@@ -29,16 +29,16 @@ export default function Programs() {
   ];
 
   return (
-    <div className="font-sans text-charcoal bg-primary-bg py-12">
+    <div className="font-sans text-[#0f3d25] bg-[#F4F8F5] py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
 
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
           <span className="text-xs uppercase font-bold tracking-widest text-accent-green bg-accent-green/10 px-3 py-1 rounded-full">Our Initiatives</span>
-          <h1 className="font-display font-black text-4xl sm:text-5xl leading-tight">
+          <h1 className="font-display font-black text-4xl sm:text-5xl leading-tight text-[#0f3d25]">
             How Raita Mitra <span className="text-accent-green">Creates</span> Impact
           </h1>
-          <p className="text-gray-600 text-lg leading-relaxed">Through targeted community programs, we strive to build self-reliant villages by resolving core healthcare, agronomic, and educational challenges.</p>
+          <p className="text-slate-700 text-lg leading-relaxed">Through targeted community programs, we strive to build self-reliant villages by resolving core healthcare, agronomic, and educational challenges.</p>
         </div>
 
         {/* Programs */}
@@ -53,13 +53,13 @@ export default function Programs() {
               </div>
               <div className={`lg:col-span-6 space-y-6 text-left ${program.reverse ? "lg:order-1" : ""}`}>
                 <span className="text-xs font-bold text-accent-green uppercase tracking-wider bg-accent-green/10 px-3 py-1 rounded-full">{program.tag}</span>
-                <h2 className="font-display font-extrabold text-2xl sm:text-3xl leading-snug text-charcoal">{program.title}</h2>
-                <p className="text-gray-600 leading-relaxed text-sm sm:text-base">{program.description}</p>
+                <h2 className="font-display font-extrabold text-2xl sm:text-3xl leading-snug text-white">{program.title}</h2>
+                <p className="text-white/80 leading-relaxed text-sm sm:text-base">{program.description}</p>
                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-2">
                   {program.features.map((f, i) => (
                     <li key={i} className="flex items-start gap-2.5">
                       <span className="text-accent-green font-bold text-base mt-0.5">✓</span>
-                      <span className="text-gray-600 text-sm font-medium leading-tight">{f}</span>
+                      <span className="text-white/80 text-sm font-medium leading-tight">{f}</span>
                     </li>
                   ))}
                 </ul>
@@ -74,7 +74,7 @@ export default function Programs() {
         {/* CTA */}
         <section className="bg-cream-card rounded-3xl p-8 sm:p-12 border border-accent-green/15 shadow-xl text-center space-y-6 max-w-4xl mx-auto">
           <h2 className="font-display font-bold text-2xl sm:text-3xl">Have a proposal or want to collaborate with us?</h2>
-          <p className="text-gray-500 max-w-xl mx-auto text-sm sm:text-base leading-relaxed">We actively coordinate with medical institutions, organic farming trainers, and school administrators to run local social campaigns.</p>
+          <p className="text-slate-600 max-w-xl mx-auto text-sm sm:text-base leading-relaxed">We actively coordinate with medical institutions, organic farming trainers, and school administrators to run local social campaigns.</p>
           <Link to="/contact" className="inline-flex items-center gap-2 border-2 border-accent-green hover:border-accent-green text-accent-green hover:text-white hover:bg-accent-green px-8 py-3.5 rounded-xl font-display font-bold text-sm transition-all duration-300">
             Contact Our Trust <span>→</span>
           </Link>

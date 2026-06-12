@@ -20,7 +20,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="relative font-sans text-charcoal bg-primary-bg overflow-hidden">
+    <div className="relative font-sans text-[#0f3d25] bg-[#F4F8F5] overflow-hidden">
 
       {/* HERO */}
       <section className="relative min-h-[calc(100vh-80px)] flex items-center pt-8 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto z-10">
@@ -33,13 +33,13 @@ export default function Home() {
               <span className="text-xs font-bold text-accent-green tracking-wider uppercase">Uplifting Rural Lives</span>
             </div>
 
-            <h1 className="font-display font-black text-4xl sm:text-5xl lg:text-6xl text-charcoal leading-[1.15] tracking-tight">
+            <h1 className="font-display font-black text-4xl sm:text-5xl lg:text-6xl text-[#0f3d25] leading-[1.15] tracking-tight">
               Harnessing <br className="hidden sm:inline" />
               <span className="text-accent-green">technologies</span> <br />
               for social impact
             </h1>
 
-            <p className="text-gray-600 text-base sm:text-lg leading-relaxed max-w-xl">
+            <p className="text-slate-700 text-base sm:text-lg leading-relaxed max-w-xl">
               Raita Mitra Social Trust is committed to driving sustainable agricultural improvements, organizing free health & surgical camps, supporting rural education, and empowering women.
             </p>
 
@@ -47,7 +47,7 @@ export default function Home() {
               <Link to="/about" className="bg-accent-green hover:bg-accent-green-hover text-white px-8 py-4 rounded-xl font-display font-bold text-sm tracking-wider shadow-xl hover:shadow-accent-green/20 hover:-translate-y-0.5 active:scale-95 transition-all duration-300">
                 What we do
               </Link>
-              <button onClick={() => setIsVideoOpen(true)} className="group flex items-center gap-3 font-display font-bold text-sm text-charcoal hover:text-accent-green transition-colors duration-300 focus:outline-none">
+              <button onClick={() => setIsVideoOpen(true)} className="group flex items-center gap-3 font-display font-bold text-sm text-white hover:text-accent-green transition-colors duration-300 focus:outline-none">
                 <span className="w-12 h-12 rounded-full bg-accent-green text-white flex items-center justify-center shadow-lg shadow-accent-green/20 group-hover:scale-110 active:scale-95 transition-all duration-300">
                   <svg className="w-5 h-5 fill-current ml-0.5" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
                 </span>
@@ -75,12 +75,12 @@ export default function Home() {
 
             <div className="absolute top-10 right-4 sm:right-12 z-20 bg-white/90 backdrop-blur-sm shadow-xl px-4 py-3 rounded-2xl border border-white/50 flex items-center gap-2.5 animate-bounce">
               <span className="text-xl">☁️</span>
-              <span className="text-xs font-bold font-display text-charcoal">Clean Health Care</span>
+              <span className="text-xs font-bold font-display text-accent-green">Clean Health Care</span>
             </div>
 
             <div className="absolute bottom-12 left-2 sm:left-10 z-20 bg-white/90 backdrop-blur-sm shadow-xl px-4 py-3 rounded-2xl border border-white/50 flex items-center gap-2.5 animate-bounce">
               <span className="text-xl">🌱</span>
-              <span className="text-xs font-bold font-display text-charcoal">Farmers First</span>
+              <span className="text-xs font-bold font-display text-accent-green">Farmers First</span>
             </div>
 
             <div className="relative w-[280px] h-[280px] sm:w-[360px] sm:h-[360px] rounded-full border-8 border-white overflow-hidden shadow-2xl z-10">
@@ -100,7 +100,7 @@ export default function Home() {
           {stats.map((item, i) => (
             <div key={i} className="text-center space-y-2 group">
               <h3 className="font-display font-black text-4xl sm:text-5xl text-accent-green group-hover:scale-105 transition-transform duration-300">{item.number}</h3>
-              <p className="text-sm font-semibold text-gray-500 uppercase tracking-wider">{item.label}</p>
+              <p className="text-sm font-semibold text-slate-600 uppercase tracking-wider">{item.label}</p>
             </div>
           ))}
         </div>
@@ -125,10 +125,10 @@ export default function Home() {
             <h2 className="font-display font-extrabold text-3xl sm:text-4xl leading-snug">
               Raita Mitra successfully completes large social & medical security experiments in Karnataka
             </h2>
-            <p className="text-gray-600 leading-relaxed">
+            <p className="text-white/80 leading-relaxed">
               Established with the core goal of helping small-scale farmers and rural dwellers, Raita Mitra Social Trust has consistently conducted health outreach camps, supported agricultural automation training, and funded school supplies for low-income families.
             </p>
-            <p className="text-gray-600 leading-relaxed">
+            <p className="text-white/80 leading-relaxed">
               Our recent collaborations with regional healthcare institutes like Srinivasa Hospital have helped bring specialized surgical consulting and diagnostics directly to underserved villages, completely free of charge.
             </p>
             <Link to="/about" className="inline-flex items-center gap-2 border-2 border-accent-green hover:border-accent-green hover:bg-accent-green text-accent-green hover:text-white px-6 py-3 rounded-xl font-display font-bold text-sm transition-all duration-300">
@@ -141,10 +141,10 @@ export default function Home() {
       {/* PARTNERS */}
       <section className="bg-cream-card py-12 px-4 border-y border-accent-green/5">
         <div className="max-w-7xl mx-auto text-center space-y-6">
-          <p className="text-xs font-bold text-gray-400 uppercase tracking-widest">Collaborating Institutes & Backed By</p>
+          <p className="text-xs font-bold text-white/70 uppercase tracking-widest">Collaborating Institutes & Backed By</p>
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-75">
             {["🏥 Srinivasa Hospital Surathkal", "🌾 Koppal Farmer Union", "🎓 Srinivasa Med Sciences", "🤝 Social Welfare Dept."].map((p, i) => (
-              <span key={i} className="font-display font-extrabold text-lg sm:text-xl text-gray-500 tracking-tight">{p}</span>
+              <span key={i} className="font-display font-extrabold text-lg sm:text-xl text-white/80 tracking-tight">{p}</span>
             ))}
           </div>
         </div>
@@ -162,7 +162,7 @@ export default function Home() {
               {focusPoints.map((point, i) => (
                 <li key={i} className="flex items-center gap-3">
                   <span className="flex-shrink-0 w-6 h-6 rounded-full bg-accent-green/15 text-accent-green flex items-center justify-center font-bold text-xs">✓</span>
-                  <span className="font-medium text-gray-700">{point}</span>
+                  <span className="font-medium text-white/80">{point}</span>
                 </li>
               ))}
             </ul>
@@ -209,9 +209,9 @@ export default function Home() {
                   <div className="space-y-2">
                     <span className="text-[10px] font-bold text-accent-green uppercase tracking-wider">{card.tag}</span>
                     <h3 className="font-display font-bold text-lg leading-snug group-hover:text-accent-green transition-colors">{card.title}</h3>
-                    <p className="text-gray-500 text-xs leading-relaxed">{card.desc}</p>
+                    <p className="text-slate-600 text-xs leading-relaxed">{card.desc}</p>
                   </div>
-                  <Link to="/programs" className="text-xs font-bold text-charcoal hover:text-accent-green transition-colors">Read details</Link>
+                  <Link to="/programs" className="text-xs font-bold text-accent-green hover:text-accent-green-hover transition-colors">Read details</Link>
                 </div>
               </article>
             ))}

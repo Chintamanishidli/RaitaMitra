@@ -4,7 +4,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#0e3e26] text-green-100 font-sans">
+    <footer className="bg-[#F4F8F5] text-slate-800 font-sans">
       <div className="h-2 bg-gradient-to-r from-accent-green/90 via-[#2ca45c] to-accent-green/90"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -24,7 +24,7 @@ export default function Footer() {
                 <span className="text-[9px] font-semibold text-accent-green tracking-widest uppercase">Social Trust (R)</span>
               </div>
             </div>
-            <p className="text-sm leading-relaxed text-gray-400">
+            <p className="text-sm leading-relaxed text-white/70">
               Raita Mitra Social Trust is dedicated to the welfare of farmers, promotion of sustainable agriculture, rural youth education, health camp initiatives, and overall rural development.
             </p>
             <div className="flex gap-4">

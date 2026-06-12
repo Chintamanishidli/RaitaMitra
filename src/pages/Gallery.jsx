@@ -26,16 +26,16 @@ export default function Gallery() {
   const categoryLabel = { health: "Medical Camp", agriculture: "Agriculture", community: "Community" };
 
   return (
-    <div className="font-sans text-charcoal bg-primary-bg py-12">
+    <div className="font-sans text-[#0f3d25] bg-[#F4F8F5] py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
 
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
           <span className="text-xs uppercase font-bold tracking-widest text-accent-green bg-accent-green/10 px-3 py-1 rounded-full">Our Gallery</span>
-          <h1 className="font-display font-black text-4xl sm:text-5xl leading-tight">
+          <h1 className="font-display font-black text-4xl sm:text-5xl leading-tight text-[#0f3d25]">
             Moments in the <span className="text-accent-green">Community</span>
           </h1>
-          <p className="text-white/80 text-lg leading-relaxed">A visual documentation of health checkup drives, organic farming workshops, and rural developmental actions.</p>
+          <p className="text-slate-700 text-lg leading-relaxed">A visual documentation of health checkup drives, organic farming workshops, and rural developmental actions.</p>
         </div>
 
         {/* Filters */}
@@ -61,7 +61,7 @@ export default function Gallery() {
               </div>
               <div className="p-5 text-left">
                 <span className="text-[10px] font-bold text-accent-green uppercase tracking-wider">{categoryLabel[item.category]}</span>
-                <h3 className="font-display font-bold text-base text-charcoal leading-snug mt-1 group-hover:text-accent-green transition-colors">{item.title}</h3>
+                <h3 className="font-display font-bold text-base text-slate-900 leading-snug mt-1 group-hover:text-accent-green transition-colors">{item.title}</h3>
               </div>
             </div>
           ))}
@@ -85,8 +85,8 @@ export default function Gallery() {
               <div className="md:w-1/3 p-8 flex flex-col justify-between text-left space-y-6">
                 <div className="space-y-4">
                   <span className="text-xs font-bold text-accent-green bg-accent-green/15 px-3 py-1 rounded-full uppercase tracking-wider">{categoryLabel[selectedImage.category]}</span>
-                  <h3 className="font-display font-black text-2xl text-charcoal leading-tight">{selectedImage.title}</h3>
-                  <p className="text-gray-500 text-sm leading-relaxed">{selectedImage.description}</p>
+                  <h3 className="font-display font-black text-2xl text-slate-900 leading-tight">{selectedImage.title}</h3>
+                  <p className="text-slate-600 text-sm leading-relaxed">{selectedImage.description}</p>
                 </div>
                 <button onClick={() => setSelectedImage(null)} className="w-full bg-accent-green hover:bg-accent-green-hover text-white py-3 rounded-xl font-display font-bold text-sm tracking-wider transition-colors duration-300">
                   Back to Gallery

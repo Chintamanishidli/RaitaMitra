@@ -20,16 +20,16 @@ export default function Contact() {
   ];
 
   return (
-    <div className="font-sans text-charcoal bg-primary-bg py-12">
+    <div className="font-sans text-[#0f3d25] bg-[#F4F8F5] py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
 
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
           <span className="text-xs uppercase font-bold tracking-widest text-accent-green bg-accent-green/10 px-3 py-1 rounded-full">Get In Touch</span>
-          <h1 className="font-display font-black text-4xl sm:text-5xl leading-tight">
+          <h1 className="font-display font-black text-4xl sm:text-5xl leading-tight text-[#0f3d25]">
             Reach Out to <span className="text-accent-green">Raita Mitra</span>
           </h1>
-          <p className="text-gray-600 text-lg leading-relaxed">Whether you're a farmer, healthcare partner, donor, or volunteer — we warmly welcome your connection.</p>
+          <p className="text-slate-700 text-lg leading-relaxed">Whether you're a farmer, healthcare partner, donor, or volunteer — we warmly welcome your connection.</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
@@ -48,7 +48,7 @@ export default function Contact() {
                     <div>
                       <p className="font-display font-bold text-sm text-accent-green uppercase tracking-wider mb-1">{item.title}</p>
                       {item.info.map((line, j) => (
-                        <p key={j} className="text-gray-300 text-sm leading-relaxed">{line}</p>
+                        <p key={j} className="text-white/80 text-sm leading-relaxed">{line}</p>
                       ))}
                     </div>
                   </div>
@@ -62,11 +62,11 @@ export default function Contact() {
             </div>
 
             {/* Map placeholder */}
-            <div className="bg-white rounded-3xl border border-accent-green/10 shadow-lg overflow-hidden aspect-video flex items-center justify-center text-center text-gray-400 font-sans text-sm p-6 space-y-2">
+            <div className="bg-white rounded-3xl border border-accent-green/10 shadow-lg overflow-hidden aspect-video flex items-center justify-center text-center text-[#0f3d25] font-sans text-sm p-6 space-y-2">
               <div>
                 <div className="text-4xl mb-2">🗺️</div>
-                <p className="font-semibold text-gray-600">Alwandi Road, Koppal</p>
-                <p className="text-xs">Karnataka, India – 583231</p>
+                <p className="font-semibold text-[#0f3d25]">Alwandi Road, Koppal</p>
+                <p className="text-xs text-slate-600">Karnataka, India – 583231</p>
               </div>
             </div>
           </div>
@@ -76,27 +76,27 @@ export default function Contact() {
             {!submitted ? (
               <>
                 <div className="mb-8">
-                  <h2 className="font-display font-bold text-2xl text-charcoal">Send a Message</h2>
-                  <p className="text-gray-400 text-sm mt-1">We'll get back to you as soon as possible.</p>
+                  <h2 className="font-display font-bold text-2xl text-[#0f3d25]">Send a Message</h2>
+                  <p className="text-slate-600 text-sm mt-1">We'll get back to you as soon as possible.</p>
                 </div>
-                <form onSubmit={handleSubmit} className="space-y-5">
+                <form onSubmit={handleSubmit} className="space-y-5 text-[#0f3d25]">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div className="space-y-1.5">
-                      <label htmlFor="contact-name" className="block text-xs font-bold text-gray-500 uppercase tracking-wider">Full Name</label>
-                      <input id="contact-name" name="name" type="text" value={formState.name} onChange={handleChange} required placeholder="Your name" className="w-full px-4 py-3 rounded-xl bg-primary-bg border border-accent-green/15 focus:border-accent-green focus:ring-2 focus:ring-accent-green/10 outline-none text-sm text-charcoal font-medium transition-all" />
+                      <label htmlFor="contact-name" className="block text-xs font-bold text-slate-700 uppercase tracking-wider">Full Name</label>
+                      <input id="contact-name" name="name" type="text" value={formState.name} onChange={handleChange} required placeholder="Your name" className="w-full px-4 py-3 rounded-xl bg-[#F4F8F5] border border-accent-green/15 focus:border-accent-green focus:ring-2 focus:ring-accent-green/10 outline-none text-sm text-[#0f3d25] font-medium transition-all placeholder:text-slate-400" />
                     </div>
                     <div className="space-y-1.5">
-                      <label htmlFor="contact-email" className="block text-xs font-bold text-gray-500 uppercase tracking-wider">Email Address</label>
-                      <input id="contact-email" name="email" type="email" value={formState.email} onChange={handleChange} required placeholder="your@email.com" className="w-full px-4 py-3 rounded-xl bg-primary-bg border border-accent-green/15 focus:border-accent-green focus:ring-2 focus:ring-accent-green/10 outline-none text-sm text-charcoal font-medium transition-all" />
+                      <label htmlFor="contact-email" className="block text-xs font-bold text-slate-700 uppercase tracking-wider">Email Address</label>
+                      <input id="contact-email" name="email" type="email" value={formState.email} onChange={handleChange} required placeholder="your@email.com" className="w-full px-4 py-3 rounded-xl bg-[#F4F8F5] border border-accent-green/15 focus:border-accent-green focus:ring-2 focus:ring-accent-green/10 outline-none text-sm text-[#0f3d25] font-medium transition-all placeholder:text-slate-400" />
                     </div>
                   </div>
                   <div className="space-y-1.5">
-                    <label htmlFor="contact-subject" className="block text-xs font-bold text-gray-500 uppercase tracking-wider">Subject</label>
-                    <input id="contact-subject" name="subject" type="text" value={formState.subject} onChange={handleChange} required placeholder="How can we help you?" className="w-full px-4 py-3 rounded-xl bg-primary-bg border border-accent-green/15 focus:border-accent-green focus:ring-2 focus:ring-accent-green/10 outline-none text-sm text-charcoal font-medium transition-all" />
+                    <label htmlFor="contact-subject" className="block text-xs font-bold text-slate-700 uppercase tracking-wider">Subject</label>
+                    <input id="contact-subject" name="subject" type="text" value={formState.subject} onChange={handleChange} required placeholder="How can we help you?" className="w-full px-4 py-3 rounded-xl bg-[#F4F8F5] border border-accent-green/15 focus:border-accent-green focus:ring-2 focus:ring-accent-green/10 outline-none text-sm text-[#0f3d25] font-medium transition-all placeholder:text-slate-400" />
                   </div>
                   <div className="space-y-1.5">
-                    <label htmlFor="contact-message" className="block text-xs font-bold text-gray-500 uppercase tracking-wider">Message</label>
-                    <textarea id="contact-message" name="message" value={formState.message} onChange={handleChange} required rows={5} placeholder="Write your message here..." className="w-full px-4 py-3 rounded-xl bg-primary-bg border border-accent-green/15 focus:border-accent-green focus:ring-2 focus:ring-accent-green/10 outline-none text-sm text-charcoal font-medium transition-all resize-none" />
+                    <label htmlFor="contact-message" className="block text-xs font-bold text-slate-700 uppercase tracking-wider">Message</label>
+                    <textarea id="contact-message" name="message" value={formState.message} onChange={handleChange} required rows={5} placeholder="Write your message here..." className="w-full px-4 py-3 rounded-xl bg-[#F4F8F5] border border-accent-green/15 focus:border-accent-green focus:ring-2 focus:ring-accent-green/10 outline-none text-sm text-[#0f3d25] font-medium transition-all resize-none placeholder:text-slate-400" />
                   </div>
                   <button type="submit" id="contact-submit-btn" className="w-full bg-accent-green hover:bg-accent-green-hover text-white py-4 rounded-xl font-display font-bold tracking-wider text-sm shadow-xl active:scale-95 transition-all duration-300">
                     Send Message ✉️
@@ -104,10 +104,10 @@ export default function Contact() {
                 </form>
               </>
             ) : (
-              <div className="flex flex-col items-center justify-center text-center py-12 space-y-5">
+              <div className="flex flex-col items-center justify-center text-center py-12 space-y-5 text-[#0f3d25]">
                 <div className="w-16 h-16 bg-accent-green/15 rounded-full flex items-center justify-center text-4xl animate-bounce">✅</div>
-                <h3 className="font-display font-black text-2xl text-charcoal">Message Received!</h3>
-                <p className="text-gray-500 text-sm max-w-xs leading-relaxed">Thank you for reaching out to Raita Mitra. A member of our team will respond to you within 24–48 working hours.</p>
+                <h3 className="font-display font-black text-2xl">Message Received!</h3>
+                <p className="text-slate-600 text-sm max-w-xs leading-relaxed">Thank you for reaching out to Raita Mitra. A member of our team will respond to you within 24–48 working hours.</p>
                 <button onClick={() => { setSubmitted(false); setFormState({ name: "", email: "", subject: "", message: "" }); }} className="bg-accent-green hover:bg-accent-green-hover text-white px-8 py-3 rounded-xl font-display font-bold text-sm transition-colors duration-300">
                   Send Another Message
                 </button>

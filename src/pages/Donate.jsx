@@ -39,7 +39,7 @@ export default function Donate() {
   ];
 
   return (
-    <div className="font-sans text-charcoal bg-primary-bg py-12">
+    <div className="font-sans text-[#0f3d25] bg-[#F4F8F5] py-12">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
 
         {/* Header */}
@@ -48,7 +48,7 @@ export default function Donate() {
           <h1 className="font-display font-black text-4xl sm:text-5xl leading-tight">
             Your Donation <span className="text-accent-green">Changes Lives</span>
           </h1>
-          <p className="text-gray-600 text-base sm:text-lg leading-relaxed max-w-xl mx-auto">Each rupee directly funds health checkups, crop research, and school supplies for those who need it most.</p>
+          <p className="text-white/80 text-base sm:text-lg leading-relaxed max-w-xl mx-auto">Each rupee directly funds health checkups, crop research, and school supplies for those who need it most.</p>
         </div>
 
         {!submitted ? (
@@ -58,10 +58,10 @@ export default function Donate() {
             <div className="lg:col-span-7 bg-white rounded-3xl border border-accent-green/10 shadow-xl overflow-hidden">
 
               {/* Steps Nav */}
-              <div className="flex border-b border-gray-100">
+              <div className="flex border-b border-white/10">
                 {[1, 2].map((s) => (
                   <button key={s} onClick={() => s < step && setStep(s)}
-                    className={`flex-1 py-5 font-display font-bold text-sm text-center transition-all ${step === s ? "text-accent-green border-b-2 border-accent-green bg-accent-green/5" : "text-gray-400 hover:text-gray-600"}`}>
+                    className={`flex-1 py-5 font-display font-bold text-sm text-center transition-all ${step === s ? "text-accent-green border-b-2 border-accent-green bg-accent-green/5" : "text-white/60 hover:text-white"}`}>
                     {s === 1 ? "1. Choose Amount" : "2. Your Details"}
                   </button>
                 ))}
@@ -70,20 +70,20 @@ export default function Donate() {
               <div className="p-8 sm:p-10">
                 {step === 1 ? (
                   <div className="space-y-8">
-                    <h2 className="font-display font-extrabold text-xl text-charcoal">How much would you like to give?</h2>
+                    <h2 className="font-display font-extrabold text-xl text-white">How much would you like to give?</h2>
                     <div className="grid grid-cols-3 gap-3 sm:grid-cols-5">
                       {presetAmounts.map((a) => (
                         <button key={a} onClick={() => handleAmountSelect(a)}
-                          className={`py-3 rounded-xl font-display font-bold text-sm transition-all duration-200 border-2 ${selectedAmount === a ? "bg-accent-green text-white border-accent-green shadow-lg" : "bg-primary-bg text-accent-green border-accent-green/15 hover:border-accent-green hover:text-accent-green"}`}>
+                          className={`py-3 rounded-xl font-display font-bold text-sm transition-all duration-200 border-2 ${selectedAmount === a ? "bg-accent-green text-white border-accent-green shadow-lg" : "bg-[#0f3d25] text-accent-green border-accent-green/15 hover:border-accent-green hover:text-accent-green"}`}>
                           ₹{a.toLocaleString("en-IN")}
                         </button>
                       ))}
                     </div>
                     <div className="space-y-2">
-                      <label htmlFor="custom-amount" className="block text-xs font-bold text-gray-500 uppercase tracking-wider">Or enter a custom amount</label>
+                      <label htmlFor="custom-amount" className="block text-xs font-bold text-white/70 uppercase tracking-wider">Or enter a custom amount</label>
                       <div className="relative">
-                        <span className="absolute left-4 top-1/2 -translate-y-1/2 font-bold text-gray-500">₹</span>
-                        <input id="custom-amount" type="number" min="1" value={customAmount} onChange={handleCustomChange} placeholder="Enter amount" className="w-full pl-8 pr-4 py-3.5 rounded-xl bg-primary-bg border-2 border-accent-green/15 focus:border-accent-green outline-none text-sm font-bold text-charcoal transition-all" />
+                        <span className="absolute left-4 top-1/2 -translate-y-1/2 font-bold text-white/70">₹</span>
+                        <input id="custom-amount" type="number" min="1" value={customAmount} onChange={handleCustomChange} placeholder="Enter amount" className="w-full pl-8 pr-4 py-3.5 rounded-xl bg-[#0f3d25] border-2 border-accent-green/15 focus:border-accent-green outline-none text-sm font-bold text-white transition-all" />
                       </div>
                     </div>
                     <button disabled={!effectiveAmount} onClick={() => setStep(2)}
@@ -94,31 +94,31 @@ export default function Donate() {
                 ) : (
                   <form onSubmit={handleFinalSubmit} className="space-y-5">
                     <div className="bg-cream-card border border-accent-green/15 rounded-2xl px-5 py-4 text-left">
-                      <p className="text-xs font-bold text-gray-500 uppercase tracking-wider">Donation Amount</p>
+                      <p className="text-xs font-bold text-white/70 uppercase tracking-wider">Donation Amount</p>
                       <p className="font-display font-black text-3xl text-accent-green mt-1">₹{effectiveAmount.toLocaleString("en-IN")}</p>
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                       <div className="space-y-1.5">
-                        <label htmlFor="donor-name" className="block text-xs font-bold text-gray-500 uppercase tracking-wider">Full Name</label>
-                        <input id="donor-name" name="name" type="text" value={donorInfo.name} onChange={handleDonorChange} required placeholder="Your name" className="w-full px-4 py-3 rounded-xl bg-primary-bg border border-accent-green/15 focus:border-accent-green outline-none text-sm font-medium transition-all" />
+                        <label htmlFor="donor-name" className="block text-xs font-bold text-white/70 uppercase tracking-wider">Full Name</label>
+                        <input id="donor-name" name="name" type="text" value={donorInfo.name} onChange={handleDonorChange} required placeholder="Your name" className="w-full px-4 py-3 rounded-xl bg-[#0f3d25] border border-accent-green/15 focus:border-accent-green outline-none text-sm text-white font-medium transition-all placeholder:text-white/40" />
                       </div>
                       <div className="space-y-1.5">
-                        <label htmlFor="donor-email" className="block text-xs font-bold text-gray-500 uppercase tracking-wider">Email</label>
-                        <input id="donor-email" name="email" type="email" value={donorInfo.email} onChange={handleDonorChange} required placeholder="your@email.com" className="w-full px-4 py-3 rounded-xl bg-primary-bg border border-accent-green/15 focus:border-accent-green outline-none text-sm font-medium transition-all" />
+                        <label htmlFor="donor-email" className="block text-xs font-bold text-white/70 uppercase tracking-wider">Email</label>
+                        <input id="donor-email" name="email" type="email" value={donorInfo.email} onChange={handleDonorChange} required placeholder="your@email.com" className="w-full px-4 py-3 rounded-xl bg-[#0f3d25] border border-accent-green/15 focus:border-accent-green outline-none text-sm text-white font-medium transition-all placeholder:text-white/40" />
                       </div>
                     </div>
                     <div className="space-y-1.5">
-                      <label htmlFor="donor-phone" className="block text-xs font-bold text-gray-500 uppercase tracking-wider">Phone Number</label>
-                      <input id="donor-phone" name="phone" type="tel" value={donorInfo.phone} onChange={handleDonorChange} required placeholder="+91 XXXXX XXXXX" className="w-full px-4 py-3 rounded-xl bg-primary-bg border border-accent-green/15 focus:border-accent-green outline-none text-sm font-medium transition-all" />
+                      <label htmlFor="donor-phone" className="block text-xs font-bold text-white/70 uppercase tracking-wider">Phone Number</label>
+                      <input id="donor-phone" name="phone" type="tel" value={donorInfo.phone} onChange={handleDonorChange} required placeholder="+91 XXXXX XXXXX" className="w-full px-4 py-3 rounded-xl bg-[#0f3d25] border border-accent-green/15 focus:border-accent-green outline-none text-sm text-white font-medium transition-all placeholder:text-white/40" />
                     </div>
                     <div className="space-y-1.5">
-                      <label htmlFor="donor-message" className="block text-xs font-bold text-gray-500 uppercase tracking-wider">Message (optional)</label>
-                      <textarea id="donor-message" name="message" value={donorInfo.message} onChange={handleDonorChange} rows={3} placeholder="Any message for the trust..." className="w-full px-4 py-3 rounded-xl bg-primary-bg border border-accent-green/15 focus:border-accent-green outline-none text-sm font-medium resize-none transition-all" />
+                      <label htmlFor="donor-message" className="block text-xs font-bold text-white/70 uppercase tracking-wider">Message (optional)</label>
+                      <textarea id="donor-message" name="message" value={donorInfo.message} onChange={handleDonorChange} rows={3} placeholder="Any message for the trust..." className="w-full px-4 py-3 rounded-xl bg-[#0f3d25] border border-accent-green/15 focus:border-accent-green outline-none text-sm text-white font-medium resize-none transition-all placeholder:text-white/40" />
                     </div>
                     <button type="submit" id="donate-submit-btn" className="w-full bg-accent-green hover:bg-accent-green-hover text-white py-4 rounded-xl font-display font-bold text-sm tracking-wider shadow-xl active:scale-95 transition-all duration-300">
                       Donate ₹{effectiveAmount.toLocaleString("en-IN")} Now 💚
                     </button>
-                    <p className="text-center text-[11px] text-gray-400">Contributions to Raita Mitra Social Trust (R) are exempt under Section 80G of the Income Tax Act.</p>
+                    <p className="text-center text-[11px] text-white/60">Contributions to Raita Mitra Social Trust (R) are exempt under Section 80G of the Income Tax Act.</p>
                   </form>
                 )}
               </div>
@@ -127,12 +127,12 @@ export default function Donate() {
             {/* Sidebar */}
             <div className="lg:col-span-5 space-y-6">
               <div className="bg-cream-card rounded-3xl border border-accent-green/15 p-6 sm:p-8 space-y-5">
-                <h3 className="font-display font-bold text-lg text-charcoal">Your Impact</h3>
+                <h3 className="font-display font-bold text-lg text-white">Your Impact</h3>
                 <ul className="space-y-3">
                   {impactTable.map((row, i) => (
                     <li key={i} className={`flex items-start gap-3 pb-3 border-b border-accent-green/5 last:border-none last:pb-0 transition-all ${effectiveAmount >= Number(row.amount.replace(/[₹,]/g, "")) ? "opacity-100" : "opacity-40"}`}>
                       <span className="font-display font-black text-accent-green text-sm w-16 flex-shrink-0">{row.amount}</span>
-                      <span className="text-gray-600 text-xs leading-relaxed">{row.impact}</span>
+                      <span className="text-white/70 text-xs leading-relaxed">{row.impact}</span>
                     </li>
                   ))}
                 </ul>
@@ -153,11 +153,11 @@ export default function Donate() {
         ) : (
           <div className="bg-white rounded-3xl border border-accent-green/15 shadow-xl max-w-xl mx-auto p-10 text-center space-y-6">
             <div className="w-20 h-20 bg-accent-green/10 rounded-full flex items-center justify-center text-5xl mx-auto animate-bounce">💚</div>
-            <h2 className="font-display font-black text-3xl text-charcoal">Thank You!</h2>
-            <p className="text-gray-500 leading-relaxed text-sm max-w-sm mx-auto">
+            <h2 className="font-display font-black text-3xl text-[#0f3d25]">Thank You!</h2>
+            <p className="text-slate-700 leading-relaxed text-sm max-w-sm mx-auto">
               Your generous donation of <strong className="text-accent-green font-display font-black text-lg">₹{effectiveAmount.toLocaleString("en-IN")}</strong> has been received.<br />A confirmation receipt will be emailed to <strong>{donorInfo.email}</strong>.
             </p>
-            <div className="bg-cream-card rounded-2xl p-4 text-xs text-gray-400 leading-relaxed">
+            <div className="bg-cream-card rounded-2xl p-4 text-xs text-slate-500 leading-relaxed">
               📑 80G Tax Exemption Certificate will be issued within 7–10 working days.
             </div>
             <button onClick={() => { setSubmitted(false); setStep(1); setSelectedAmount(null); setCustomAmount(""); setDonorInfo({ name: "", email: "", phone: "", message: "" }); }}
