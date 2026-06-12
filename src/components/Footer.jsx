@@ -4,8 +4,8 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-charcoal text-gray-300 font-sans">
-      <div className="h-2 bg-gradient-to-r from-accent-green via-green-500 to-accent-green"></div>
+    <footer className="bg-[#0e3e26] text-green-100 font-sans">
+      <div className="h-2 bg-gradient-to-r from-accent-green/90 via-[#2ca45c] to-accent-green/90"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
@@ -29,7 +29,7 @@ export default function Footer() {
             </p>
             <div className="flex gap-4">
               {["F", "T", "I", "Y"].map((letter, i) => (
-                <div key={i} className="w-9 h-9 rounded-xl bg-charcoal-light hover:bg-accent-green text-gray-400 hover:text-white flex items-center justify-center transition-all duration-300 hover:-translate-y-1 cursor-pointer">
+              <div className="w-9 h-9 rounded-xl bg-green-900/80 hover:bg-accent-green text-green-200 hover:text-white flex items-center justify-center transition-all duration-300 hover:-translate-y-1 cursor-pointer">
                   <span className="text-xs font-semibold">{letter}</span>
                 </div>
               ))}
@@ -92,7 +92,7 @@ export default function Footer() {
               Subscribe to receive updates on rural healthcare camps and agricultural guidance drives.
             </p>
             <form onSubmit={(e) => e.preventDefault()} className="space-y-2">
-              <input type="email" placeholder="Your email address" className="w-full px-4 py-3 rounded-xl bg-charcoal-light border border-gray-700 text-white text-sm focus:outline-none focus:border-accent-green transition-colors" required />
+              <input type="email" placeholder="Your email address" className="w-full px-4 py-3 rounded-xl bg-white/5 border border-green-700 text-green-100 text-sm focus:outline-none focus:border-accent-green transition-colors" required />
               <button type="submit" className="w-full bg-accent-green hover:bg-accent-green-hover text-white py-3 rounded-xl font-display font-bold text-sm tracking-wider shadow-lg active:scale-95 transition-all duration-300">
                 Subscribe
               </button>
@@ -101,12 +101,12 @@ export default function Footer() {
 
         </div>
 
-        <div className="mt-16 pt-8 border-t border-gray-800 text-center text-xs text-gray-500 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <div className="mt-16 pt-8 border-t border-green-700 text-center text-xs text-green-200 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p>© {currentYear} Raita Mitra Social Trust (R). All Rights Reserved.</p>
-          <div className="flex gap-4">
-            <a href="#privacy" className="hover:text-accent-green transition-colors">Privacy Policy</a>
+          <div className="flex gap-4 text-green-100">
+            <a href="#privacy" className="hover:text-white transition-colors">Privacy Policy</a>
             <span>•</span>
-            <a href="#terms" className="hover:text-accent-green transition-colors">Terms of Use</a>
+            <a href="#terms" className="hover:text-white transition-colors">Terms of Use</a>
           </div>
         </div>
       </div>
