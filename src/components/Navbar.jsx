@@ -59,7 +59,7 @@ export default function Navbar() {
 
           {/* Donate Button */}
           <div className="hidden md:flex items-center">
-            <Link to="/donate" className="bg-charcoal hover:bg-accent-green text-white px-6 py-3 rounded-xl font-display font-bold text-sm tracking-wider shadow-lg hover:shadow-accent-green/20 active:scale-95 transition-all duration-300">
+            <Link to="/donate" className="bg-accent-green hover:bg-accent-green-hover text-white px-6 py-3 rounded-xl font-display font-bold text-sm tracking-wider shadow-lg hover:shadow-accent-green/20 active:scale-95 transition-all duration-300">
               Donate Now
             </Link>
           </div>
@@ -99,7 +99,7 @@ export default function Navbar() {
             </NavLink>
           ))}
           <div className="pt-4 pb-2 border-t border-accent-green/10">
-            <Link to="/donate" onClick={() => setIsOpen(false)} className="block w-full text-center bg-charcoal hover:bg-accent-green text-white py-3.5 rounded-xl font-display font-bold text-base transition-all duration-300">
+            <Link to="/donate" onClick={() => setIsOpen(false)} className="block w-full text-center bg-accent-green hover:bg-accent-green-hover text-white py-3.5 rounded-xl font-display font-bold text-base transition-all duration-300">
               Donate Now
             </Link>
           </div>

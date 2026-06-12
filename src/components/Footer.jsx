@@ -66,7 +66,7 @@ export default function Footer() {
               Contact Info
               <span className="absolute bottom-0 left-0 w-8 h-[2px] bg-accent-green"></span>
             </h3>
-            <ul className="space-y-4 text-sm text-gray-400">
+            <ul className="space-y-4 text-sm text-white/70">
               <li className="flex items-start gap-3">
                 <span className="text-accent-green text-lg">📍</span>
                 <span><strong>Regd. Office:</strong><br />Raita Mitra Social Trust (R),<br />Alwandi Road, Koppal,<br />Karnataka, India - 583231</span>
@@ -88,7 +88,7 @@ export default function Footer() {
               Stay Connected
               <span className="absolute bottom-0 left-0 w-8 h-[2px] bg-accent-green"></span>
             </h3>
-            <p className="text-sm text-gray-400 leading-relaxed">
+            <p className="text-sm text-white/70 leading-relaxed">
               Subscribe to receive updates on rural healthcare camps and agricultural guidance drives.
             </p>
             <form onSubmit={(e) => e.preventDefault()} className="space-y-2">

@@ -35,14 +35,14 @@ export default function Gallery() {
           <h1 className="font-display font-black text-4xl sm:text-5xl leading-tight">
             Moments in the <span className="text-accent-green">Community</span>
           </h1>
-          <p className="text-gray-600 text-lg leading-relaxed">A visual documentation of health checkup drives, organic farming workshops, and rural developmental actions.</p>
+          <p className="text-white/80 text-lg leading-relaxed">A visual documentation of health checkup drives, organic farming workshops, and rural developmental actions.</p>
         </div>
 
         {/* Filters */}
         <div className="flex flex-wrap justify-center gap-3">
           {categories.map((cat) => (
             <button key={cat.id} onClick={() => setActiveFilter(cat.id)}
-              className={`px-6 py-2.5 rounded-full font-display font-bold text-xs sm:text-sm transition-all duration-300 ${activeFilter === cat.id ? "bg-charcoal text-white shadow-md" : "bg-white text-gray-500 hover:bg-accent-green/10 hover:text-accent-green border border-accent-green/10"}`}>
+              className={`px-6 py-2.5 rounded-full font-display font-bold text-xs sm:text-sm transition-all duration-300 ${activeFilter === cat.id ? "bg-accent-green text-white shadow-md" : "bg-white text-accent-green hover:bg-accent-green/10 hover:text-accent-green border border-accent-green/10"}`}>
               {cat.name}
             </button>
           ))}
@@ -55,8 +55,8 @@ export default function Gallery() {
               className="bg-white rounded-3xl overflow-hidden border border-accent-green/5 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer group">
               <div className="relative aspect-[4/3] overflow-hidden bg-gray-100">
                 <img src={item.image} alt={item.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                <div className="absolute inset-0 bg-charcoal/30 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
-                  <span className="w-10 h-10 rounded-full bg-white text-charcoal flex items-center justify-center text-lg shadow-lg font-bold">⤢</span>
+                <div className="absolute inset-0 bg-accent-green/30 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+                  <span className="w-10 h-10 rounded-full bg-white text-accent-green flex items-center justify-center text-lg shadow-lg font-bold">⤢</span>
                 </div>
               </div>
               <div className="p-5 text-left">
@@ -68,7 +68,7 @@ export default function Gallery() {
         </div>
 
         {filteredItems.length === 0 && (
-          <div className="text-center py-16 text-gray-400">
+          <div className="text-center py-16 text-white/80">
             <span className="text-4xl">📷</span>
             <p className="mt-2 text-sm">No photos found in this category.</p>
           </div>
@@ -76,10 +76,10 @@ export default function Gallery() {
 
         {/* Lightbox */}
         {selectedImage && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-charcoal/90 backdrop-blur-md">
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-accent-green/90 backdrop-blur-md">
             <div className="relative bg-white rounded-3xl overflow-hidden shadow-2xl max-w-4xl w-full border border-accent-green/20 flex flex-col md:flex-row">
-              <button onClick={() => setSelectedImage(null)} className="absolute top-4 right-4 bg-charcoal/50 hover:bg-charcoal text-white w-9 h-9 rounded-full flex items-center justify-center font-bold text-sm z-30 transition-colors">✕</button>
-              <div className="md:w-2/3 bg-black flex items-center justify-center aspect-[4/3] md:aspect-auto">
+              <button onClick={() => setSelectedImage(null)} className="absolute top-4 right-4 bg-accent-green/30 hover:bg-accent-green/50 text-white w-9 h-9 rounded-full flex items-center justify-center font-bold text-sm z-30 transition-colors">✕</button>
+              <div className="md:w-2/3 bg-white/95 flex items-center justify-center aspect-[4/3] md:aspect-auto">
                 <img src={selectedImage.image} alt={selectedImage.title} className="max-h-[80vh] md:max-h-full object-contain" />
               </div>
               <div className="md:w-1/3 p-8 flex flex-col justify-between text-left space-y-6">
@@ -88,7 +88,7 @@ export default function Gallery() {
                   <h3 className="font-display font-black text-2xl text-charcoal leading-tight">{selectedImage.title}</h3>
                   <p className="text-gray-500 text-sm leading-relaxed">{selectedImage.description}</p>
                 </div>
-                <button onClick={() => setSelectedImage(null)} className="w-full bg-charcoal hover:bg-accent-green text-white py-3 rounded-xl font-display font-bold text-sm tracking-wider transition-colors duration-300">
+                <button onClick={() => setSelectedImage(null)} className="w-full bg-accent-green hover:bg-accent-green-hover text-white py-3 rounded-xl font-display font-bold text-sm tracking-wider transition-colors duration-300">
                   Back to Gallery
                 </button>
               </div>

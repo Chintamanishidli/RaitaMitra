@@ -44,7 +44,7 @@ export default function Home() {
             </p>
 
             <div className="flex flex-wrap items-center gap-5 pt-2">
-              <Link to="/about" className="bg-charcoal hover:bg-accent-green text-white px-8 py-4 rounded-xl font-display font-bold text-sm tracking-wider shadow-xl hover:shadow-accent-green/20 hover:-translate-y-0.5 active:scale-95 transition-all duration-300">
+              <Link to="/about" className="bg-accent-green hover:bg-accent-green-hover text-white px-8 py-4 rounded-xl font-display font-bold text-sm tracking-wider shadow-xl hover:shadow-accent-green/20 hover:-translate-y-0.5 active:scale-95 transition-all duration-300">
                 What we do
               </Link>
               <button onClick={() => setIsVideoOpen(true)} className="group flex items-center gap-3 font-display font-bold text-sm text-charcoal hover:text-accent-green transition-colors duration-300 focus:outline-none">
@@ -131,7 +131,7 @@ export default function Home() {
             <p className="text-gray-600 leading-relaxed">
               Our recent collaborations with regional healthcare institutes like Srinivasa Hospital have helped bring specialized surgical consulting and diagnostics directly to underserved villages, completely free of charge.
             </p>
-            <Link to="/about" className="inline-flex items-center gap-2 border-2 border-charcoal hover:border-accent-green hover:bg-accent-green text-charcoal hover:text-white px-6 py-3 rounded-xl font-display font-bold text-sm transition-all duration-300">
+            <Link to="/about" className="inline-flex items-center gap-2 border-2 border-accent-green hover:border-accent-green hover:bg-accent-green text-accent-green hover:text-white px-6 py-3 rounded-xl font-display font-bold text-sm transition-all duration-300">
               Learn More <span>→</span>
             </Link>
           </div>
@@ -166,7 +166,7 @@ export default function Home() {
                 </li>
               ))}
             </ul>
-            <Link to="/programs" className="bg-charcoal hover:bg-accent-green text-white px-7 py-3.5 rounded-xl font-display font-bold text-sm tracking-wider shadow-lg hover:shadow-accent-green/20 transition-all duration-300">
+            <Link to="/programs" className="bg-accent-green hover:bg-accent-green-hover text-white px-7 py-3.5 rounded-xl font-display font-bold text-sm tracking-wider shadow-lg hover:shadow-accent-green/20 transition-all duration-300">
               Explore Programs
             </Link>
           </div>
@@ -220,12 +220,12 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section className="relative py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto my-12 overflow-hidden rounded-3xl bg-charcoal text-white text-center">
-        <div className="absolute -right-24 -bottom-24 w-80 h-80 rounded-full bg-accent-green/20 blur-3xl pointer-events-none" />
-        <div className="absolute -left-24 -top-24 w-80 h-80 rounded-full bg-emerald-500/10 blur-3xl pointer-events-none" />
+      <section className="relative py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto my-12 overflow-hidden rounded-3xl bg-accent-green text-white text-center">
+        <div className="absolute -right-24 -bottom-24 w-80 h-80 rounded-full bg-white/10 blur-3xl pointer-events-none" />
+        <div className="absolute -left-24 -top-24 w-80 h-80 rounded-full bg-white/10 blur-3xl pointer-events-none" />
         <div className="relative z-10 max-w-3xl mx-auto space-y-8">
           <h2 className="font-display font-extrabold text-3xl sm:text-5xl leading-tight">Together we can transform rural communities</h2>
-          <p className="text-gray-400 text-base sm:text-lg max-w-2xl mx-auto">Your support enables us to organize medical treatments, buy seed supplies for struggling families, and sustain local educational facilities.</p>
+          <p className="text-white/80 text-base sm:text-lg max-w-2xl mx-auto">Your support enables us to organize medical treatments, buy seed supplies for struggling families, and sustain local educational facilities.</p>
           <div className="flex flex-wrap justify-center gap-4 pt-2">
             <Link to="/donate" className="bg-accent-green hover:bg-accent-green-hover text-white px-8 py-4 rounded-xl font-display font-bold text-sm tracking-wider shadow-lg active:scale-95 transition-all duration-300">Make a Donation</Link>
             <Link to="/contact" className="bg-white/10 hover:bg-white/20 text-white border border-white/20 px-8 py-4 rounded-xl font-display font-bold text-sm tracking-wider active:scale-95 transition-all duration-300">Become a Volunteer</Link>
@@ -235,13 +235,13 @@ export default function Home() {
 
       {/* VIDEO MODAL */}
       {isVideoOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-charcoal/80 backdrop-blur-md">
-          <div className="relative bg-charcoal rounded-3xl shadow-2xl w-full max-w-3xl overflow-hidden aspect-video border border-accent-green/15 flex flex-col items-center justify-center text-white space-y-6 p-8">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-accent-green/80 backdrop-blur-md">
+          <div className="relative bg-accent-green rounded-3xl shadow-2xl w-full max-w-3xl overflow-hidden aspect-video border border-accent-green/15 flex flex-col items-center justify-center text-white space-y-6 p-8">
             <button onClick={() => setIsVideoOpen(false)} className="absolute top-4 right-4 bg-white/10 hover:bg-white/20 text-white w-9 h-9 rounded-full flex items-center justify-center font-bold text-sm z-30 transition-colors">✕</button>
             <div className="w-16 h-16 rounded-full bg-accent-green text-white flex items-center justify-center text-2xl font-bold animate-pulse">🌾</div>
             <div className="text-center space-y-2 max-w-md">
               <h3 className="font-display font-extrabold text-lg sm:text-xl">Raita Mitra Social Trust Initiatives</h3>
-              <p className="text-xs text-gray-400 leading-relaxed">Empowering farming practices and free rural clinics in Alwandi, Koppal district, Karnataka.</p>
+              <p className="text-xs text-white/80 leading-relaxed">Empowering farming practices and free rural clinics in Alwandi, Koppal district, Karnataka.</p>
             </div>
             <button onClick={() => setIsVideoOpen(false)} className="bg-accent-green hover:bg-accent-green-hover px-6 py-2.5 rounded-xl font-display font-bold text-xs transition-colors">Close Player</button>
           </div>

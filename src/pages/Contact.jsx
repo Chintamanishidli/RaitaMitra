@@ -36,10 +36,10 @@ export default function Contact() {
 
           {/* Left - Info */}
           <div className="lg:col-span-5 space-y-8">
-            <div className="bg-charcoal text-white p-8 sm:p-10 rounded-3xl space-y-8 shadow-xl">
+            <div className="bg-accent-green text-white p-8 sm:p-10 rounded-3xl space-y-8 shadow-xl">
               <div>
                 <h2 className="font-display font-bold text-2xl text-white mb-2">Contact Information</h2>
-                <p className="text-gray-400 text-sm">Call, email or visit us. Our team is happy to respond to all inquiries.</p>
+                <p className="text-white/80 text-sm">Call, email or visit us. Our team is happy to respond to all inquiries.</p>
               </div>
               <div className="space-y-6">
                 {contactDetails.map((item, i) => (
@@ -98,7 +98,7 @@ export default function Contact() {
                     <label htmlFor="contact-message" className="block text-xs font-bold text-gray-500 uppercase tracking-wider">Message</label>
                     <textarea id="contact-message" name="message" value={formState.message} onChange={handleChange} required rows={5} placeholder="Write your message here..." className="w-full px-4 py-3 rounded-xl bg-primary-bg border border-accent-green/15 focus:border-accent-green focus:ring-2 focus:ring-accent-green/10 outline-none text-sm text-charcoal font-medium transition-all resize-none" />
                   </div>
-                  <button type="submit" id="contact-submit-btn" className="w-full bg-charcoal hover:bg-accent-green text-white py-4 rounded-xl font-display font-bold tracking-wider text-sm shadow-xl active:scale-95 transition-all duration-300">
+                  <button type="submit" id="contact-submit-btn" className="w-full bg-accent-green hover:bg-accent-green-hover text-white py-4 rounded-xl font-display font-bold tracking-wider text-sm shadow-xl active:scale-95 transition-all duration-300">
                     Send Message ✉️
                   </button>
                 </form>
@@ -108,7 +108,7 @@ export default function Contact() {
                 <div className="w-16 h-16 bg-accent-green/15 rounded-full flex items-center justify-center text-4xl animate-bounce">✅</div>
                 <h3 className="font-display font-black text-2xl text-charcoal">Message Received!</h3>
                 <p className="text-gray-500 text-sm max-w-xs leading-relaxed">Thank you for reaching out to Raita Mitra. A member of our team will respond to you within 24–48 working hours.</p>
-                <button onClick={() => { setSubmitted(false); setFormState({ name: "", email: "", subject: "", message: "" }); }} className="bg-charcoal hover:bg-accent-green text-white px-8 py-3 rounded-xl font-display font-bold text-sm transition-colors duration-300">
+                <button onClick={() => { setSubmitted(false); setFormState({ name: "", email: "", subject: "", message: "" }); }} className="bg-accent-green hover:bg-accent-green-hover text-white px-8 py-3 rounded-xl font-display font-bold text-sm transition-colors duration-300">
                   Send Another Message
                 </button>
               </div>

@@ -63,7 +63,7 @@ export default function Programs() {
                     </li>
                   ))}
                 </ul>
-                <Link to="/donate" className="inline-block bg-charcoal hover:bg-accent-green text-white px-6 py-3 rounded-xl font-display font-bold text-xs tracking-wider shadow-lg hover:shadow-accent-green/20 transition-all duration-300">
+                <Link to="/donate" className="inline-block bg-accent-green hover:bg-accent-green-hover text-white px-6 py-3 rounded-xl font-display font-bold text-xs tracking-wider shadow-lg hover:shadow-accent-green/20 transition-all duration-300">
                   Support this Initiative
                 </Link>
               </div>
@@ -75,7 +75,7 @@ export default function Programs() {
         <section className="bg-cream-card rounded-3xl p-8 sm:p-12 border border-accent-green/15 shadow-xl text-center space-y-6 max-w-4xl mx-auto">
           <h2 className="font-display font-bold text-2xl sm:text-3xl">Have a proposal or want to collaborate with us?</h2>
           <p className="text-gray-500 max-w-xl mx-auto text-sm sm:text-base leading-relaxed">We actively coordinate with medical institutions, organic farming trainers, and school administrators to run local social campaigns.</p>
-          <Link to="/contact" className="inline-flex items-center gap-2 border-2 border-charcoal hover:border-accent-green text-charcoal hover:text-white hover:bg-accent-green px-8 py-3.5 rounded-xl font-display font-bold text-sm transition-all duration-300">
+          <Link to="/contact" className="inline-flex items-center gap-2 border-2 border-accent-green hover:border-accent-green text-accent-green hover:text-white hover:bg-accent-green px-8 py-3.5 rounded-xl font-display font-bold text-sm transition-all duration-300">
             Contact Our Trust <span>→</span>
           </Link>
         </section>

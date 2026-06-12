@@ -74,7 +74,7 @@ export default function Donate() {
                     <div className="grid grid-cols-3 gap-3 sm:grid-cols-5">
                       {presetAmounts.map((a) => (
                         <button key={a} onClick={() => handleAmountSelect(a)}
-                          className={`py-3 rounded-xl font-display font-bold text-sm transition-all duration-200 border-2 ${selectedAmount === a ? "bg-charcoal text-white border-charcoal shadow-lg" : "bg-primary-bg text-charcoal border-accent-green/15 hover:border-accent-green hover:text-accent-green"}`}>
+                          className={`py-3 rounded-xl font-display font-bold text-sm transition-all duration-200 border-2 ${selectedAmount === a ? "bg-accent-green text-white border-accent-green shadow-lg" : "bg-primary-bg text-accent-green border-accent-green/15 hover:border-accent-green hover:text-accent-green"}`}>
                           ₹{a.toLocaleString("en-IN")}
                         </button>
                       ))}
@@ -87,7 +87,7 @@ export default function Donate() {
                       </div>
                     </div>
                     <button disabled={!effectiveAmount} onClick={() => setStep(2)}
-                      className="w-full bg-charcoal hover:bg-accent-green disabled:opacity-40 disabled:cursor-not-allowed text-white py-4 rounded-xl font-display font-bold text-sm tracking-wider shadow-xl active:scale-95 transition-all duration-300">
+                      className="w-full bg-accent-green hover:bg-accent-green-hover disabled:opacity-40 disabled:cursor-not-allowed text-white py-4 rounded-xl font-display font-bold text-sm tracking-wider shadow-xl active:scale-95 transition-all duration-300">
                       Continue →
                     </button>
                   </div>
@@ -137,10 +137,10 @@ export default function Donate() {
                   ))}
                 </ul>
               </div>
-              <div className="bg-charcoal text-white rounded-3xl p-6 space-y-3 shadow-xl">
+              <div className="bg-accent-green text-white rounded-3xl p-6 space-y-3 shadow-xl">
                 <p className="font-display font-bold text-base">🔒 Safe & Secure Payments</p>
-                <p className="text-xs text-gray-400 leading-relaxed">Your donation is processed securely. We accept UPI, Net Banking, NEFT, and Cheque/DD.</p>
-                <div className="flex flex-wrap gap-2 pt-2 text-xs text-gray-500 font-bold">
+                <p className="text-xs text-white/80 leading-relaxed">Your donation is processed securely. We accept UPI, Net Banking, NEFT, and Cheque/DD.</p>
+                <div className="flex flex-wrap gap-2 pt-2 text-xs text-white/80 font-bold">
                   <span className="bg-white/10 px-3 py-1.5 rounded-full">📱 UPI</span>
                   <span className="bg-white/10 px-3 py-1.5 rounded-full">🏦 NEFT/RTGS</span>
                   <span className="bg-white/10 px-3 py-1.5 rounded-full">🎫 Cheque/DD</span>
@@ -161,7 +161,7 @@ export default function Donate() {
               📑 80G Tax Exemption Certificate will be issued within 7–10 working days.
             </div>
             <button onClick={() => { setSubmitted(false); setStep(1); setSelectedAmount(null); setCustomAmount(""); setDonorInfo({ name: "", email: "", phone: "", message: "" }); }}
-              className="bg-charcoal hover:bg-accent-green text-white px-8 py-3 rounded-xl font-display font-bold text-sm transition-colors duration-300">
+              className="bg-accent-green hover:bg-accent-green-hover text-white px-8 py-3 rounded-xl font-display font-bold text-sm transition-colors duration-300">
               Donate Again
             </button>
           </div>

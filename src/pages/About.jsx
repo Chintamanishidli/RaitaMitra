@@ -83,7 +83,7 @@ export default function About() {
             <h3 className="font-display font-extrabold text-xl sm:text-2xl">Want to learn more about our local projects?</h3>
             <p className="text-white/80 text-sm max-w-xl">Discover how our agricultural, educational, and medical camps are structured to create a sustainable cycle of development.</p>
           </div>
-          <Link to="/programs" className="bg-charcoal hover:bg-white text-white hover:text-charcoal px-8 py-3.5 rounded-xl font-display font-bold text-sm tracking-wider active:scale-95 transition-all duration-300">Explore Programs</Link>
+          <Link to="/programs" className="bg-accent-green hover:bg-accent-green-hover text-white px-8 py-3.5 rounded-xl font-display font-bold text-sm tracking-wider active:scale-95 transition-all duration-300">Explore Programs</Link>
         </section>
 
       </div>
