@@ -1,4 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
 @import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", sans-serif;
+  --font-display: "Outfit", sans-serif;
+
+  --color-primary-bg: #F4F8F5;
+  --color-accent-green: #1B874B;
+  --color-accent-green-hover: #126E3A;
+  --color-charcoal: #1E1E24;
+  --color-charcoal-light: #2D2D35;
+  --color-cream-card: #EBF3EC;
+}
 
 html {
   scroll-behavior: smooth;
@@ -7,5 +20,8 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: var(--font-sans);
+  background-color: var(--color-primary-bg);
+  color: var(--color-charcoal);
+  -webkit-font-smoothing: antialiased;
 }
